@@ -301,7 +301,7 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .disco-artist-description {
     text-align: center;
   }
