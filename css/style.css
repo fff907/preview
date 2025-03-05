@@ -384,7 +384,7 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .jacket-img {
-    max-width: 100%
+    max-width: 100%;
     height: auto;
   }
   
