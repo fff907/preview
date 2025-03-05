@@ -262,13 +262,6 @@ a:link, a:visited, a:hover, a:active {
   white-space: nowrap;
 }
 
-.jacket-img {
-  width: 500px;
-  height: auto;
-  object-fit: contain;
-  max-width: 100%;
-}
-
 .bio-wrapper img {
   width: 100%;  
   height: auto;
@@ -379,6 +372,13 @@ a:link, a:visited, a:hover, a:active {
 
   .jacket {
     margin-bottom: 0;
+  }
+
+  .jacket-img {
+    width: 500px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
   }
   
   .disco-item-name {
