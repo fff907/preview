@@ -257,22 +257,23 @@ img {
   font-size: 1.5rem;
   margin: 1.875rem 0 1.5625rem 0;
   text-align: center;
+  white-space: nowrap;
 }
 
 .disco-item-release {
   font-size: 1.2rem;
   margin-bottom: 3.125rem;
   text-align: end;
+  white-space: nowrap;
 }
 
 .jacket-img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   display: block;
   margin: 0 auto;
 }
 
-.jacket-img,
 .bio-wrapper img {
   width: 100%;  
   height: auto;
@@ -366,7 +367,6 @@ img {
     gap: 4rem;
   }
 
-
   .discography-item {
     max-width: 90%;
     margin: 3rem auto;
@@ -391,13 +391,6 @@ img {
     z-index: 2;
     text-shadow: 1px -1px #333;
     margin-left: 40px;
-  }
-
-  .disco-item-name-reverse {
-    position: relative;
-    z-index: 2;
-    text-shadow: 1px -1px #333;
-    margin-right: 40px;
   }
 
   .iframe-wrap {
