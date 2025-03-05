@@ -385,7 +385,7 @@ img {
   }
   
   .disco-item-name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     position: relative;
     z-index: 2;
     text-shadow: 1px -1px #333;
@@ -415,14 +415,12 @@ img {
   }
 
   .disco-item-title {
-    font-size: 1.4rem;
     margin: 0;
   }
 
   .disco-item-release {
     margin: 0;
     text-align: center;
-    font-size: 1.3rem;
   }
 
   .bio-wrapper {
