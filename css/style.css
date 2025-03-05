@@ -232,7 +232,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .bio-wrapper img {
-  width: 100%;  
+  width: 68%;
+  text-align: center;  
   height: auto;
   object-fit: cover;
 }
@@ -279,12 +280,6 @@ a:link, a:visited, a:hover, a:active {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
-
-  .cover-video {
-    background-position: left 18% center;
-    background-size: cover;
-    min-height: 100vh;
   }
 
   .disco-artist-title,
