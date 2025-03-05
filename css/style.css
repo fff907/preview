@@ -238,14 +238,6 @@ a:link, a:visited, a:hover, a:active {
   object-fit: cover;
 }
 
-.iframe-wrap {
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
 .facebook-wrap {
   text-align: center;
   margin-top: 3.125rem;
@@ -271,11 +263,11 @@ a:link, a:visited, a:hover, a:active {
   color: #fff;
 }
 
-/* max-width: 768px  SP版コーディング
+/*  SP版コーディング
 ------------------------------------------------------------*/
 
-@media (max-width: 768px) {
-  .cover__video {
+@media (max-width: 1500px) {
+  .cover-video {
     display: none;
   }
   
@@ -306,10 +298,10 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-/* min-width: 768px  PC版コーディング
+/*  PC版コーディング
 ------------------------------------------------------------*/
 
-@media (min-width: 768px) {
+@media (min-width: 1500px) {
   body {
     font-size: 1.125rem;
     line-height: 2;
@@ -392,20 +384,6 @@ a:link, a:visited, a:hover, a:active {
     z-index: 2;
     text-shadow: 1px -1px #333;
     margin-left: 40px;
-  }
-
-  .iframe-wrap {
-    margin: 0;
-    position: absolute;
-    top: 247px;
-    left: 328px;
-  }
-
-  .iframe-wrap-reverse {
-    margin: 0;
-    position: absolute;
-    top: 254px;
-    left: 67px;
   }
 
   .disco-item-title {
