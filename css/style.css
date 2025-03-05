@@ -215,6 +215,13 @@ a:link, a:visited, a:hover, a:active {
     height: auto;
     object-fit: cover;
   }
+
+  .jacket-img-pc {
+    width: 800px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
 }
 
 /* メイン
