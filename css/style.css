@@ -491,12 +491,3 @@ a:link, a:visited, a:hover, a:active {
     max-width: 500px;
   }
 }
-
-@media (max-width: 1199px) {
-  .jacket-img-pc {
-    width: 800px;
-    height: auto;
-    object-fit: contain;
-    max-width: 100%;
-  }
-}
