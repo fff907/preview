@@ -203,13 +203,13 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .disco-artist-title {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 0 auto 1.875rem auto;
 }
 
 .bio-artist-title {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin: 0 auto 1.875rem auto;
 }
 
@@ -265,11 +265,7 @@ a:link, a:visited, a:hover, a:active {
 /*  SP版コーディング
 ------------------------------------------------------------*/
 
-@media (max-width: 1500px) {
-  .cover-video {
-    display: none;
-  }
-  
+@media (max-width: 1500px) {  
   .cover {
     background-position: left 18% center;
     background-size: cover;
@@ -302,6 +298,10 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 500px) {
+  .cover-video {
+    display: none;
+  }
+
   .jacket-img {
     width: 100%;  
     height: auto;
