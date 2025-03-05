@@ -228,7 +228,6 @@ a:link, a:visited, a:hover, a:active {
 .disco-item-release {
   font-size: 1.2rem;
   margin-bottom: 3.125rem;
-  text-align: end;
   white-space: nowrap;
 }
 
