@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* SP版コーディング
-------------------------------------------------------------*/
-
 /* ベースのスタイル
 ------------------------------------------------------------*/
 
@@ -37,19 +34,6 @@ a {
 
 a:link, a:visited, a:hover, a:active {
   color: #fff;
-}
-
-@media (max-width: 768px) {
-  .new-line {
-    display: none;
-  }
-
-  .jacket-img {
-    width: 360px;
-    height: auto;
-    object-fit: contain;
-    max-width: 100%;
-  }
 }
 
 /* 共通のスタイル
@@ -203,27 +187,6 @@ a:link, a:visited, a:hover, a:active {
   z-index: -1;
 }
 
-@media (max-width: 768px) {
-  .cover__video {
-    display: none;
-  }
-  
-  .cover {
-    background-position: left 18% center;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .cover img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-}
-
 /* メイン
 ------------------------------------------------------------*/
 
@@ -312,6 +275,41 @@ a:link, a:visited, a:hover, a:active {
   /* 14px */
   text-align: center;
   color: #fff;
+}
+
+/* max-width: 768px  SP版コーディング
+------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+  .cover__video {
+    display: none;
+  }
+  
+  .cover {
+    background-position: left 18% center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cover img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .new-line {
+    display: none;
+  }
+
+  .jacket-img {
+    width: 360px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
 }
 
 /* min-width: 768px  PC版コーディング
