@@ -380,11 +380,6 @@ a:link, a:visited, a:hover, a:active {
   .jacket {
     margin-bottom: 0;
   }
-
-  .jacket-img {
-    max-width: 100%;
-    height: auto;
-  }
   
   .disco-item-name {
     position: relative;
