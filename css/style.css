@@ -263,12 +263,10 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .jacket-img {
-  max-width: 500px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 aut
+  width: 500px; 
+  height: 500px;
+  object-fit: cover;
+  max-width: 100%;
 }
 
 .bio-wrapper img {
