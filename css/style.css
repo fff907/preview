@@ -254,15 +254,22 @@ img {
 }
 
 .disco-item-title {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin: 1.875rem 0 1.5625rem 0;
   text-align: center;
 }
 
 .disco-item-release {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 3.125rem;
   text-align: end;
+}
+
+.jacket-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .jacket-img,
@@ -377,15 +384,8 @@ img {
   .jacket {
     margin-bottom: 0;
   }
-
-  .jacket-img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
   
   .disco-item-name {
-    font-size: 1.3rem;
     position: relative;
     z-index: 2;
     text-shadow: 1px -1px #333;
@@ -393,7 +393,6 @@ img {
   }
 
   .disco-item-name-reverse {
-    font-size: 2.2rem;
     position: relative;
     z-index: 2;
     text-shadow: 1px -1px #333;
@@ -415,10 +414,12 @@ img {
   }
 
   .disco-item-title {
+    font-size: 2.2rem;
     margin: 0;
   }
 
   .disco-item-release {
+    font-size: 1.6rem;
     margin: 0;
     text-align: center;
   }
