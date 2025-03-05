@@ -263,9 +263,9 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .jacket-img {
-  width: 900px; 
-  height: 900px;
-  object-fit: cover;
+  width: 500px;
+  height: auto;
+  object-fit: contain;
   max-width: 100%;
 }
 
@@ -482,19 +482,5 @@ a:link, a:visited, a:hover, a:active {
   .contact-paragraph {
     text-align: left;
     max-width: 500px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .jacket-img {
-    width: 500px;
-    height: 500px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .jacket-img {
-    width: 400px;
-    height: 400px;
   }
 }
