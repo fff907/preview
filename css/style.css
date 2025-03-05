@@ -361,10 +361,11 @@ img {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    max-width: 100%;
+    max-width: 90%;
     margin: 2.5rem auto;
-    gap: 8rem;
+    gap: 4rem;
   }
+
 
   .discography-item {
     max-width: 90%;
