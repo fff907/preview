@@ -286,15 +286,19 @@ a:link, a:visited, a:hover, a:active {
     object-fit: cover;
   }
 
-  .new-line {
-    display: none;
+  .disco-wrapper {
+    text-align: center;
   }
-
+  
   .jacket-img {
     width: 360px;
     height: auto;
     object-fit: contain;
     max-width: 100%;
+  }
+
+  .new-line {
+    display: none;
   }
 }
 
