@@ -232,13 +232,6 @@ a:link, a:visited, a:hover, a:active {
   white-space: nowrap;
 }
 
-.jacket-img {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  object-fit: contain;
-}
-
 .bio-wrapper img {
   width: 100%;  
   height: auto;
@@ -306,7 +299,7 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .jacket-img {
-    max-width: 600px;
+    width: 360px;
     height: auto;
     object-fit: contain;
     max-width: 100%;
@@ -381,7 +374,14 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .jacket-img {
-    max-width: 800px;
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  .jacket-img-pc {
+    width: 800px;
     height: auto;
     object-fit: contain;
     max-width: 100%;
