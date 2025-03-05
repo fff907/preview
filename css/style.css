@@ -382,7 +382,7 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .jacket-img-pc {
-    width: 1000px;
+    width: 800px;
     height: auto;
     object-fit: contain;
     max-width: 100%;
