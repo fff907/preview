@@ -492,7 +492,7 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-@media (max-width: 1199px) {
+@media (min-width: 1199px) {
   .jacket-img {
     width: 400px;
     height: auto;
