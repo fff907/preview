@@ -493,7 +493,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (min-width: 1199px) {
-  .jacket-img {
+  .jacket-img-pc {
     width: 800px;
     height: auto;
     object-fit: contain;
