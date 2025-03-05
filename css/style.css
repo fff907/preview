@@ -286,7 +286,6 @@ a:link, a:visited, a:hover, a:active {
   }
 
   .disco-artist-title,
-  .disco-artist-description,
   .disco-wrapper {
     text-align: center;
   }
@@ -303,6 +302,10 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (max-width: 400px) {
+  .disco-artist-description {
+    text-align: center;
+  }
+
   .jacket-img {
     width: 100%;  
     height: auto;
