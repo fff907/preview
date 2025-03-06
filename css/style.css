@@ -322,9 +322,39 @@ a:link, a:visited, a:hover, a:active {
     z-index: 1;
   }
 
-  .bio-wrapper-reverse {
+  .bio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+  }
+
+  .bio-wrapper-reverse,
+  .disco-wrapper-reverse {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .biography-item,
+  .contact-item {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .biography-item {
+    margin-bottom: 5rem;
+  }
+  
+  .bio-artist-title {
+    font-size: 2.2rem;
+    position: absolute;
+    top: 0;
+    left: 575;
+    z-index: 2;
+    text-shadow: 1px -1px #333;
+    margin-bottom: 2rem;
   }
 
   .bio-artist-title-reverse {
@@ -335,6 +365,10 @@ a:link, a:visited, a:hover, a:active {
     z-index: 2;
     text-shadow: 1px -1px #333;
     margin-bottom: 2rem;
+  }
+
+  .bio-img-reverse {
+    left: 0;
   }
 }
 
