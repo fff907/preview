@@ -312,16 +312,6 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (min-width: 600px) {
-  .bio-wrapper img,
-  .bio-img-reverse {
-    width: 70%;
-    max-width: 900px;
-    height: auto;
-    object-fit: cover;
-    position: relative;
-    z-index: 1;
-  }
-
   .bio-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -334,6 +324,16 @@ a:link, a:visited, a:hover, a:active {
   .bio-wrapper-reverse {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .bio-wrapper img,
+  .bio-img-reverse {
+    width: 70%;
+    max-width: 900px;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
   }
 
   .biography-item,
