@@ -174,6 +174,8 @@ a:link, a:visited, a:hover, a:active {
   background-size: cover;
   background-position: center;
   overflow: hidden;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
 .cover-video {
@@ -185,6 +187,8 @@ a:link, a:visited, a:hover, a:active {
   object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
 .loading {
@@ -192,23 +196,23 @@ a:link, a:visited, a:hover, a:active {
   width: 100%;
   height: 100%;
   background: #000;
-  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
   font-size: 2rem;
-  font-weight: bold;
   z-index: 9999;
+  opacity: 1;
 }
 
-.cover-overlay {
-  position: absolute;
+.color-overlay {
+  position: fixed;
   width: 100%;
   height: 100%;
-  background: #000000; 
-  top: 100%;
-  left: 0;
-  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* メイン
