@@ -297,6 +297,14 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
+@media (max-width: 920px) {  
+  .bio-wrapper img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 @media (max-width: 500px) {
   .cover-video {
     display: none;
@@ -304,12 +312,6 @@ a:link, a:visited, a:hover, a:active {
 
   .jacket-img {
     width: 100%;  
-    height: auto;
-    object-fit: cover;
-  }
-
-  .bio-wrapper img {
-    width: 80%;
     height: auto;
     object-fit: cover;
   }
