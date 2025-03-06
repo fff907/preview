@@ -1,30 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("load", function () {
     const tl = gsap.timeline();
-  
-    tl.to(".loading", {
-      opacity: 0,
-      duration: 1,
-      ease: "power2.inOut",
-      onComplete: function () {
-        document.querySelector(".loading").style.display = "none"; // ローディング画面を消す
-      }
+
+    tl.to(".cover-black", {
+      y: "-100%",
+      duration: 1.2,
+      ease: "power2.out",
     })
-    .to(".cover-overlay", {
-      top: 0,
-      duration: 1.5,
-      ease: "power2.inOut"
-    })
-    .to(".cover-overlay", {
-      opacity: 0,
-      duration: 0.5,
-      onComplete: function () {
-        document.querySelector(".cover-overlay").style.display = "none"; // オーバーレイを消す
-      }
-    })
-    .to(".cover-video", {
+    .to(".cover-white", {
+      y: "-100%",
+      duration: 1.2,
+      ease: "power2.out",
+    }, "-=0.8") // 黒が消えた直後に白も動かす
+    .set(".cover-black, .cover-white", { display: "none" }) // 画面外に出たら非表示
+    .to("body", {
       opacity: 1,
-      duration: 1.5,
-      ease: "power2.inOut"
+      duration: 1.2,
+      ease: "power2.out",
     });
   });
-  
+});
