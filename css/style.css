@@ -297,7 +297,7 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-@media (max-width: 920px) {  
+@media (max-width: 1400px) {  
   .cover-video {
     display: none;
   }
