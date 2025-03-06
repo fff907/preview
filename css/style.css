@@ -306,8 +306,9 @@ a:link, a:visited, a:hover, a:active {
 }
 
 @media (min-width: 600px) {
-  .bio-wrapper img {
-    width: 50%;
+  .bio-wrapper img,
+  .bio-img-reverse {
+    width: 70%;
     max-width: 900px;
     height: auto;
     object-fit: cover;
