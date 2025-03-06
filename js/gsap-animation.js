@@ -3,23 +3,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tl.to(".loading", {
     opacity: 0,
-    duration: 1.2,
-    ease: "power2.out",
+    duration: 1,
+    ease: "power2.inOut",
+    onComplete: function () {
+      document.querySelector(".loading").style.display = "none"; // ローディング画面を消す
+    }
   })
-  .set(".loading", { display: "none" }) // ローディングを非表示
-  .to(".color-overlay", {
-    opacity: 1,
-    duration: 0.5, // オーバーレイを素早く表示
-    ease: "power2.out",
+  .to(".cover-overlay", {
+    top: 0,
+    duration: 1.5,
+    ease: "power2.inOut"
   })
-  .to(".color-overlay", {
+  .to(".cover-overlay", {
     opacity: 0,
-    duration: 1.5, // 徐々にフェードアウト
-    ease: "power2.out",
-  }, "+=0.5") // 0.5秒待ってからオーバーレイを消す
+    duration: 0.5,
+    onComplete: function () {
+      document.querySelector(".cover-overlay").style.display = "none"; // オーバーレイを消す
+    }
+  })
   .to(".cover-video", {
     opacity: 1,
-    duration: 2, // メインビジュアルをフェードイン
-    ease: "power2.out",
-  }, "-=1.2"); // オーバーレイが消え始めたと同時にフェードイン
+    duration: 1.5,
+    ease: "power2.inOut"
+  });
 });
