@@ -1,24 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.to(".cover-black", {
-    y: "-100%",
-    duration: 1.2,
-    ease: "power2.out",
-  })
-  .to(".cover-white", {
-    y: "-100%",
-    duration: 1.2,
-    ease: "power2.out",
-  }, "-=0.8") 
-  .set(".cover-black, .cover-white", { display: "none" })
-  .to("body", {
-    opacity: 1,
-    duration: 1.2,
-    ease: "power2.out",
-  });
+  const tl = gsap.timeline();
 
-  setTimeout(() => {
-    document.body.style.opacity = "1";
-    document.querySelector(".cover-black").style.display = "none";
-    document.querySelector(".cover-white").style.display = "none";
-  }, 5000);
+  tl.to(".loading", {
+    opacity: 0,
+    duration: 1,
+    ease: "power2.inOut",
+    onComplete: function () {
+      document.querySelector(".loading").style.display = "none"; // ローディング画面を消す
+    }
+  })
+  .to(".cover-overlay", {
+    top: 0,
+    duration: 1.5,
+    ease: "power2.inOut"
+  })
+  .to(".cover-overlay", {
+    opacity: 0,
+    duration: 0.5,
+    onComplete: function () {
+      document.querySelector(".cover-overlay").style.display = "none"; // オーバーレイを消す
+    }
+  })
+  .to(".cover-video", {
+    opacity: 1,
+    duration: 1.5,
+    ease: "power2.inOut"
+  });
 });
