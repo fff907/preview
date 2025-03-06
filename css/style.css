@@ -231,12 +231,6 @@ a:link, a:visited, a:hover, a:active {
   white-space: nowrap;
 }
 
-.bio-wrapper img {
-  width: 100%; 
-  height: auto;
-  object-fit: cover;
-}
-
 .facebook-wrap {
   text-align: center;
   margin-top: 3.125rem;
@@ -303,18 +297,17 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-@media (max-width: 920px) {  
-  .bio-wrapper img {
-    width: 60%;
-    height: auto;
-    object-fit: cover;
-    text-align: center;
-  }
-}
-
 @media (max-width: 500px) {
   .jacket-img {
     width: 100%;  
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 600px) {
+  .bio-wrapper img {
+    width: 100%; 
     height: auto;
     object-fit: cover;
   }
