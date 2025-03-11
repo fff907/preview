@@ -1,16 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
   const loading = document.querySelector(".loading");
-  
-  loading.style.display = "flex"; 
+  const video = document.querySelector(".cover-video");
+  loading.style.display = "flex";
 
   const tl = gsap.timeline();
 
-  tl.to(".loading", {
-    opacity: 0,
-    duration: 1,
-    ease: "power2.inOut",
-    onComplete: function () {
-      loading.style.display = "none";
-    }
-  });
+  if (video) {
+    video.addEventListener("loadeddata", function () {
+      tl.to(".loading", {
+        opacity: 0,
+        duration: 1,
+        ease: "power2.inOut",
+        onComplete: function () {
+          loading.style.display = "none";
+        }
+      });
+    });
+  } else {
+    tl.to(".loading", {
+      opacity: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      onComplete: function () {
+        loading.style.display = "none";
+      }
+    });
+  }
 });
