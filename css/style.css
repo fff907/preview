@@ -212,7 +212,7 @@ a:link, a:visited, a:hover, a:active {
   margin-bottom: 10px;
   display: inline-block;
   text-align: center;
-  white-space: nowrap; /* 改行防止 */
+  white-space: nowrap;
 }
 
 .loading-bar {

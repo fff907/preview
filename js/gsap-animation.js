@@ -34,9 +34,9 @@ window.addEventListener("load", function () {
     }
   })
 
-  // ★PC版でローディング時に背景画像（静止画）を非表示にする
+  // PC版でローディング時に静止画を非表示にする
   .add(() => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 1100) {
       cover.style.backgroundImage = "none";
     }
   })
