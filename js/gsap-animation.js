@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tl = gsap.timeline();
 
+  
   // オーバーレイをスライドアップ
   tl.to(".cover-overlay", {
     top: 0,
