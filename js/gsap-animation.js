@@ -1,17 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const tl = gsap.timeline();
 
-  // ローディングをフェードアウト
-  tl.to(".loading", {
-    opacity: 0,
-    duration: 1,
-    ease: "power2.inOut",
-    onComplete: function () {
-      document.querySelector(".loading").style.display = "none"; // ローディング画面を完全に消す
-    }
-  })
   // オーバーレイをスライドアップ
-  .to(".cover-overlay", {
+  tl.to(".cover-overlay", {
     top: 0,
     duration: 1.5,
     ease: "power2.inOut"
