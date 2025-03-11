@@ -193,11 +193,13 @@ a:link, a:visited, a:hover, a:active {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: white;
   z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   will-change: opacity; /* キャッシュによる描画省略の防止 */
 }
 
