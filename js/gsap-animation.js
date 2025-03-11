@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const loadingScreen = document.querySelector(".loading");
+  
+  // 読み込みのたびに強制的に表示
+  loadingScreen.style.display = "flex";
+  loadingScreen.style.opacity = "1";
+
   const tl = gsap.timeline();
 
-  // ローディングバーを伸ばす
   tl.to(".loading-bar", {
     width: "100%",
     duration: 1.5,
