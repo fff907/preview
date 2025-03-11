@@ -10,6 +10,11 @@ window.addEventListener("load", function () {
 
   const tl = gsap.timeline();
 
+  // PC版の場合、ローディング開始時点で背景画像を消す
+  if (window.innerWidth >= 1100) {
+    cover.style.backgroundImage = "none";
+  }
+
   // 緑のバーをLoading...の文字幅に合わせて伸ばす
   tl.to(loadingBar, {
     width: textWidth,
@@ -34,17 +39,15 @@ window.addEventListener("load", function () {
     }
   })
 
-  // PC版でローディング時に静止画を非表示にする
-  .add(() => {
-    if (window.innerWidth >= 1100) {
-      cover.style.backgroundImage = "none";
-    }
-  })
-
-  // メインビジュアル（動画）をフェードイン
+  // PC版のみ動画をフェードイン（SPでは何もしない）
   .to(coverVideo, {
     opacity: 1,
     duration: 1,
-    ease: "power2.inOut"
+    ease: "power2.inOut",
+    onComplete: function () {
+      if (window.innerWidth >= 768) {
+        cover.style.backgroundImage = "none"; // PC版のみに適用
+      }
+    }
   }, "-=0.5");
 });
