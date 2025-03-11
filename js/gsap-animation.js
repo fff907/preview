@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loading = document.querySelector(".loading");
-  loading.style.display = "flex";
+  gsap.set(".loading", { opacity: 1, display: "block" }); // ローディングの初期状態を強制セット
 
   const tl = gsap.timeline();
 
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     duration: 1,
     ease: "power2.inOut",
     onComplete: function () {
-      loading.style.display = "none";
+      document.querySelector(".loading").style.display = "none"; // ローディング画面を消す
     }
   });
 });
