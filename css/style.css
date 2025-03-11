@@ -188,8 +188,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 .loading {
-  display: block;
-  opacity: 1;
+  display: flex;
+  opacity: 0;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -197,10 +197,10 @@ a:link, a:visited, a:hover, a:active {
   z-index: 9999;
   top: 0;
   left: 0;
-  display: flex;
   align-items: center;
   justify-content: center;
   will-change: opacity; /* キャッシュによる描画省略の防止 */
+  transition: opacity 0.3s ease-in-out;
 }
 
 .loading-text {
