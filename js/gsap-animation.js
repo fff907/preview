@@ -1,13 +1,18 @@
 window.addEventListener("load", function () {
   const loading = document.querySelector(".loading");
   const loadingBar = document.querySelector(".loading-bar");
+  const loadingText = document.querySelector(".loading-text");
+  const cover = document.querySelector(".cover");
   const coverVideo = document.querySelector(".cover-video");
+
+  // Loadingバーを「Loading...」のテキスト幅に合わせる
+  const textWidth = loadingText.offsetWidth + "px"; 
 
   const tl = gsap.timeline();
 
-  // 緑のバーをアニメーション
+  // 緑のバーをLoading...の文字幅に合わせて伸ばす
   tl.to(loadingBar, {
-    width: "100%",
+    width: textWidth,
     duration: 1,
     ease: "power2.inOut"
   })
@@ -29,10 +34,17 @@ window.addEventListener("load", function () {
     }
   })
 
-  // メインビジュアルをフェードイン
+  // ★PC版でローディング時に背景画像（静止画）を非表示にする
+  .add(() => {
+    if (window.innerWidth >= 768) {
+      cover.style.backgroundImage = "none";
+    }
+  })
+
+  // メインビジュアル（動画）をフェードイン
   .to(coverVideo, {
     opacity: 1,
     duration: 1,
     ease: "power2.inOut"
-  }, "-=0.5"); // ローディングが消える0.5秒前からフェードイン開始
+  }, "-=0.5");
 });
