@@ -6,7 +6,7 @@ window.addEventListener("load", function () {
   const coverVideo = document.querySelector(".cover-video");
 
   // Loadingバーを「Loading...」のテキスト幅に合わせる
-  const textWidth = loadingText.offsetWidth + "px"; 
+  const textWidth = loadingText.offsetWidth + "px";
 
   const tl = gsap.timeline();
 
@@ -45,9 +45,18 @@ window.addEventListener("load", function () {
     duration: 1,
     ease: "power2.inOut",
     onComplete: function () {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1100) {
         cover.style.backgroundImage = "none"; // PC版のみに適用
       }
     }
   }, "-=0.5");
+
+  // ** SP → PC → SP で背景画像が消える問題の修正**
+  window.addEventListener("resize", function () {
+    if (window.innerWidth < 1100) {
+      cover.style.backgroundImage = "url('../images/cover_bg.png')"; // SPで静止画を再適用
+    } else {
+      cover.style.backgroundImage = "none"; // PCは背景なし
+    }
+  });
 });
