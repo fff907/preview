@@ -198,6 +198,7 @@ a:link, a:visited, a:hover, a:active {
   align-items: center;
   font-size: 2rem;
   opacity: 1;
+  will-change: opacity; /* キャッシュによる描画省略の防止 */
 }
 
 .loading-text {
