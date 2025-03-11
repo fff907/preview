@@ -5,15 +5,17 @@ window.addEventListener("load", function () {
   const cover = document.querySelector(".cover");
   const coverVideo = document.querySelector(".cover-video");
 
+  // PC版（1100px以上）の場合、ローディング開始時点で背景画像を消す
+  if (window.innerWidth >= 1100) {
+    cover.style.backgroundImage = "none";
+  } else {
+    cover.style.backgroundImage = "url('../images/cover_bg.png')"; // SPのとき背景画像をセット
+  }
+
   // Loadingバーを「Loading...」のテキスト幅に合わせる
   const textWidth = loadingText.offsetWidth + "px";
 
   const tl = gsap.timeline();
-
-  // PC版の場合、ローディング開始時点で背景画像を消す
-  if (window.innerWidth >= 1100) {
-    cover.style.backgroundImage = "none";
-  }
 
   // 緑のバーをLoading...の文字幅に合わせて伸ばす
   tl.to(loadingBar, {
@@ -51,7 +53,7 @@ window.addEventListener("load", function () {
     }
   }, "-=0.5");
 
-  // ** SP → PC → SP で背景画像が消える問題の修正**
+  // ** 1100px以上 ⇔ 1100px未満 で背景画像が切り替わらない問題を修正**
   window.addEventListener("resize", function () {
     if (window.innerWidth < 1100) {
       cover.style.backgroundImage = "url('../images/cover_bg.png')"; // SPで静止画を再適用
