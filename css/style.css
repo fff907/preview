@@ -336,6 +336,12 @@ a:link, a:visited, a:hover, a:active {
   .cover-video {
     display: none;
   }
+
+  .cover {
+    background-image: url(../images/cover_bg.png) !important;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media (max-width: 500px) {
