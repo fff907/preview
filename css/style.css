@@ -219,7 +219,6 @@ a:link, a:visited, a:hover, a:active {
   width: 0;
   height: 5px;
   background: #6E5280;
-  margin-top: 5px;
   transition: width 1s ease-in-out;
 }
 
