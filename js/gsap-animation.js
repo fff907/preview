@@ -1,33 +1,38 @@
 window.addEventListener("load", function () {
   const loading = document.querySelector(".loading");
   const loadingBar = document.querySelector(".loading-bar");
-
-  // ローディングを確実に表示
-  loading.style.opacity = "1";
+  const coverVideo = document.querySelector(".cover-video");
 
   const tl = gsap.timeline();
 
-  // 緑のバーのアニメーション（最初は100%になる）
-  tl.to(".loading-bar", {
-    width: "100%", 
+  // 緑のバーをアニメーション
+  tl.to(loadingBar, {
+    width: "100%",
     duration: 1,
     ease: "power2.inOut"
   })
 
-  // 少しだけローディングを表示する
-  .to(".loading", {
+  // ローディングを0.5秒間表示
+  .to(loading, {
     opacity: 1,
-    duration: 0.5, // 0.5秒だけ完全に表示
+    duration: 0.5
   })
 
   // ローディングをフェードアウト
-  .to(".loading", {
+  .to(loading, {
     opacity: 0,
     duration: 1,
     ease: "power2.inOut",
-    delay: 0.5, // 0.5秒の待機時間を入れる（合計1秒表示）
+    delay: 0.5,
     onComplete: function () {
       loading.style.display = "none"; // ローディングを完全に消す
     }
-  });
+  })
+
+  // メインビジュアルをフェードイン
+  .to(coverVideo, {
+    opacity: 1,
+    duration: 1,
+    ease: "power2.inOut"
+  }, "-=0.5"); // ローディングが消える0.5秒前からフェードイン開始
 });
