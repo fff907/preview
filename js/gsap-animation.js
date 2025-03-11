@@ -1,30 +1,16 @@
-window.onload = function () {
-  const loadingScreen = document.querySelector(".loading");
-
-
-  loadingScreen.style.display = "flex";
-  loadingScreen.style.opacity = "1";
+document.addEventListener("DOMContentLoaded", function () {
+  const loading = document.querySelector(".loading");
+  
+  loading.style.display = "flex"; 
 
   const tl = gsap.timeline();
 
-  tl.to(".loading-bar", {
-    width: "100%",
-    duration: 1.5,
-    ease: "power2.inOut"
-  })
-  .to(".loading-text", {
+  tl.to(".loading", {
     opacity: 0,
-    y: -20,
-    duration: 0.5
-  }, "-=0.5")
-  .to(".loading", {
-    opacity: 0,
-    duration: 0.8,
-    ease: "power2.inOut"
-  })
-  .add(() => {
-    setTimeout(() => {
-      loadingScreen.style.display = "none";
-    }, 300);
+    duration: 1,
+    ease: "power2.inOut",
+    onComplete: function () {
+      loading.style.display = "none";
+    }
   });
-};
+});
