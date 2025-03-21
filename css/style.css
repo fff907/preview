@@ -1,1 +1,515 @@
+@charset "UTF-8";
 
+/* ベースのスタイル
+------------------------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "sans-serif", sans-serif;
+  font-style: normal;
+  font-size: .9375rem;
+  /* 15px */
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  background:#FFC1A9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* 共通のスタイル
+------------------------------------------------------------*/
+
+/* タイトル */
+.section-heading {
+  text-align: center;
+}
+
+.section-title {
+  color: #333;
+  margin: 1rem 0;
+  font-size: 2.625rem;
+  font-weight: 700;
+  line-height: 3.5;
+  text-align: center;
+}
+
+/* コンテナ */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 1.25rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* ヘッダー
+------------------------------------------------------------*/
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header a {
+  color: #333;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  height: 3.75rem;
+  padding: 0 0 0 1.25rem;
+  /* ロゴ部分全体の左に20px */
+  box-sizing: border-box;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.05rem;
+}
+
+/* ハンバーガーメニューボタン */
+.hamburger-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  font-size: 1.75rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* SPナビゲーション */
+.sp-nav {
+  position: absolute;
+  top: 3.75rem;
+  left: 0;
+  height: 25.625rem;
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: #FFC1A9;
+  border-bottom: #333 1px solid;
+  box-sizing: border-box;
+}
+
+.sp-nav-list li {
+  margin: 3.4375rem 0;
+}
+
+/* PCナビゲーション */
+.pc-nav {
+  display: none;
+}
+
+.pc-nav-list {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pc-nav-list li {
+  margin: 0 0 0 3.125rem;
+  /* 左に50px */
+}
+
+/* カバー
+------------------------------------------------------------*/
+
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(../images/cover_sp.png);
+  background-size: cover;
+}
+
+/* メイン
+------------------------------------------------------------*/
+
+/* Worksセクションの全体レイアウト */
+.works {
+  padding: 0 10% 100px 10%;
+}
+
+/* カテゴリ全体（detailsタグのスタイル） */
+.works-category {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+/* 開いているときのスタイル */
+.works-category[open] {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* サマリー（クリックで開閉する部分） */
+.works-category summary {
+  padding: 15px 20px;
+  font-size: 22px;
+  font-weight: bold;
+  border-bottom: 3px solid #333;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+/* ホバー時に色を変更 */
+.works-category summary:hover {
+  background-color: #f0f0f0;
+}
+
+/* summary のデフォルトの矢印を非表示 */
+.works-category summary::-webkit-details-marker {
+  display: none;
+}
+
+/* コンテンツの高さを自動調整（リスト全体を正しく表示） */
+.works-content {
+  padding: 15px 20px;
+  height: 0;
+  display: none; /* デフォルトは非表示 */
+  transition: height 0.3s ease-out;
+}
+
+/* 開いたときは自動で全リストを表示 */
+.works-category[open] .works-content {
+  height: auto;
+  display: block;
+  padding: 15px 20px;
+}
+
+/* PCでも1カラムに統一 */
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* リストスタイル */
+.works-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.works-list li {
+  padding: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.works-list-actor li {
+  text-align: center;
+}
+
+/* Newsセクション */
+.news {
+  padding: 40px 10%;
+  background-color: #D9D9D9;
+  text-align: center;
+}
+
+/* 記事カード（横長レイアウト・PC版） */
+.news-card {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  gap: 15px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* 記事の画像 */
+.news-card img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0; /* 画像サイズを固定 */
+}
+
+/* 記事情報エリア */
+.news-info {
+  display: flex;
+  flex-direction: row; /* 横並び */
+  align-items: center;
+  flex-grow: 1; /* 右側の空間を適切に調整 */
+  justify-content: space-between;
+}
+
+/* タイトルエリア */
+.news-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+/* 記事の日付 */
+.news-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* 記事のタイトル */
+.news-card h3 {
+  font-size: 18px;
+  margin: 0;
+  text-align: left;
+  flex-grow: 1;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset; /* 省略なし */
+  max-width: 100%;
+  margin-right: 20px;
+}
+
+/* 「続きを読む」ボタン（右端に配置） */
+.read-more {
+  display: inline-block;
+  background: #007BFF;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background 0.2s;
+  min-width: 100px; /* ボタンの幅を統一 */
+  text-align: center;
+  align-self: center; /* ボタンを縦中央 */
+  margin-left: auto; /* 右端に寄せる */
+}
+
+.read-more:hover {
+  background: #0056b3;
+}
+
+/* もっと見るボタン */
+.news-more {
+  margin: 30px auto 60px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#loadMore {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+#loadMore:hover {
+  background: #0056b3;
+}
+
+.contact_description {
+  margin: 0 1.1875rem;
+  margin-bottom: 3.125rem;
+  text-align: center;
+}
+
+.contact_button {
+  margin: 3.125rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 3.4375rem;
+}
+
+.contact_button li {
+  list-style: none;
+}
+
+.contact_button a {
+  display: block;
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.625rem;
+  line-height: 0;
+  color: #fff;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+/* フッター
+------------------------------------------------------------*/
+
+.footer {
+  padding: 2.5rem;
+  font-size: .875rem;
+  /* 14px */
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+}
+
+/* PC版のみの調整 */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.125rem;
+    line-height: 2;
+  }
+
+  main {
+    margin: auto;
+  }
+
+  .section-title {
+    margin: 1.25rem 0;
+    font-size: 4.375rem;
+    text-align: center;
+    line-height: 2.5;
+  }
+
+  .header {
+    padding: 0 1.875rem;
+  }
+
+  .hamburger-button {
+    display: none;
+  }
+
+  .pc-nav {
+    display: block;
+  }
+
+  .cover {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 100;
+    height: 100vh;
+    color: #fff;
+    background-image: url(../images/cover_bg.png);
+    background-size: cover;
+    background-position: 18%;
+    overflow: hidden;
+  }
+
+  .contact_button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+/* SP版のみの調整 */
+@media (max-width: 768px) {  
+  .section-title {
+    margin: 0.5rem 0;
+    line-height: 2.5;
+  }
+
+  .works-category summary {
+    font-size: 14px;
+  }
+
+  .works, .news {
+    padding: 20px 0 40px 0;
+  }
+
+  .works-list li {
+    font-size: 14px;
+  }
+
+  .news-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-date {
+    font-size: 10px;
+  }
+
+  .news-card {
+    flex-direction: column;
+    text-align: center;
+    height: 350px;
+    padding: 20px;
+  }
+
+  .news-card img {
+    width: 230px;
+    height: 140px;
+    margin-bottom: 5px;
+  }
+
+  .news-card h3 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .news-card .read-more {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 90px;
+    margin: 0 auto;
+  }
+
+  #loadMore {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .footer-copyright {
+    font-size: 60%;
+  }
+}
